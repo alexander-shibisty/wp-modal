@@ -11,22 +11,22 @@
 
 require_once __DIR__ . '/settings.php';
 
-function scriptsInclude()
+function scripts_include()
 {
     wp_register_script('simplemodal-plugin-scripts', plugins_url('/js/simplemodal.js', __FILE__));
     wp_enqueue_script('simplemodal-plugin-scripts');
 }
-add_action('wp_enqueue_scripts', 'scriptsInclude');
+add_action('wp_enqueue_scripts', 'scripts_include');
 
-function stylesInclude()
+function styles_include()
 {
     wp_register_style('simplemodal-plugin-styles', plugins_url('/css/simplemodal.css', __FILE__));
     wp_enqueue_style('simplemodal-plugin-styles');
 }
-add_action('wp_enqueue_scripts', 'stylesInclude');
+add_action('wp_enqueue_scripts', 'styles_include');
 
-function simplemodalInit() {
+function simplemodal_init() {
     include __DIR__ . '/templates/modal.php';
 }
 
-simplemodalInit();
+simplemodal_init();
