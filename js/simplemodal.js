@@ -54,7 +54,7 @@ window.onload = function(event) {
 
         var simpleModalButton = document.getElementById('simplemodal-ok');
         simpleModalButton.onclick = function(event) {
-            setSimpleModalCookie(simpleModalCookieName, 1, 60);
+            setSimpleModalCookie(simpleModalCookieName, 1, 365 * 24 * 60 * 60);
             simpleModal.style.display = 'none';
         }
     }
