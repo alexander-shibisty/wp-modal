@@ -25,11 +25,21 @@ function styles_include()
 }
 add_action('wp_enqueue_scripts', 'styles_include');
 
-function simplemodal_init() {
+function simplemodal_init() 
+{
     $modalText = get_option(SIMPLEMODAL_OPTION);
     include __DIR__ . '/templates/modal.php';
 }
 
-if (!is_admin()){
-    simplemodal_init();
+function wc_notice() 
+{
+    include __DIR__ . '/templates/admin/woocommerce_undefined.php'; 
+}
+
+if(is_plugin_active( 'woocommerce/woocommerce.php' )) {
+    if (!is_admin()){
+        simplemodal_init();
+    }
+} else {
+    add_action('admin_notices', 'wc_notice');
 }
