@@ -29,4 +29,6 @@ function simplemodal_init() {
     include __DIR__ . '/templates/modal.php';
 }
 
-simplemodal_init();
+if (!is_admin()){
+    simplemodal_init();
+}
