@@ -1,6 +1,6 @@
 <div id="simplemodal">
     <div class="simplemodal-wrapper">
-        <p>Hello world</p>
+        <p><?php echo $modalText; ?></p>
         <button id="simplemodal-ok">Ok!</button>
     </div>
 </div>

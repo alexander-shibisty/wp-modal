@@ -26,6 +26,7 @@ function styles_include()
 add_action('wp_enqueue_scripts', 'styles_include');
 
 function simplemodal_init() {
+    $modalText = get_option(SIMPLEMODAL_OPTION);
     include __DIR__ . '/templates/modal.php';
 }
 
