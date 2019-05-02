@@ -1,4 +1,6 @@
 <div id="simplemodal">
-    <span>Hello world</span>
-    <button>Ok!</button>
+    <div class="simplemodal-wrapper">
+        <p>Hello world</p>
+        <button>Ok!</button>
+    </div>
 </div>
